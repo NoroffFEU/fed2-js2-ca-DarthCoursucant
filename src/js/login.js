@@ -33,7 +33,7 @@ const loginUser = async (email, password) => {
         await createApiKey(token); 
 
         // Redirect after successful login and API key creation
-        window.location.href = "get_all_post.html";
+        window.location.href = "../../post/get-all-posts.html";
         console.log("Login successful! Token:", token);
       } else {
         statusMessage.textContent =
@@ -87,23 +87,3 @@ const loginUser = async (email, password) => {
       const password = document.getElementById("password").value;
       loginUser(email, password); // Call loginUser on form submit
     });
-
-    function redirectToPage(event) {
-      event.preventDefault(); // Prevent form from submitting in the traditional way
-
-      // Retrieve email and password values
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-
-      // Correct credentials
-      const correctEmail = 'AKB@studd.noroff.no';
-      const correctPassword = 'Anakin';
-
-      // Validate credentials
-      if (email === correctEmail && password === correctPassword) {
-          // Redirect to another page if valid
-          window.location.href = 'get-all-posts.html'; // Replace with your target URL
-      } else {
-          alert('Invalid email or password');
-      }
-  }
