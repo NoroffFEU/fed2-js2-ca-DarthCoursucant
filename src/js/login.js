@@ -1,9 +1,3 @@
-export async function login({ email, password }) {}
-
-const email = "Noroff@email.com";
-
-const password = "Anakin";
-
 const loginUser = async (email, password) => {
     const button = document.querySelector('button[type="submit"]');
     const statusMessage = document.getElementById("statusMessage");
@@ -93,3 +87,23 @@ const loginUser = async (email, password) => {
       const password = document.getElementById("password").value;
       loginUser(email, password); // Call loginUser on form submit
     });
+
+    function redirectToPage(event) {
+      event.preventDefault(); // Prevent form from submitting in the traditional way
+
+      // Retrieve email and password values
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      // Correct credentials
+      const correctEmail = 'AKB@studd.noroff.no';
+      const correctPassword = 'Anakin';
+
+      // Validate credentials
+      if (email === correctEmail && password === correctPassword) {
+          // Redirect to another page if valid
+          window.location.href = 'get-all-posts.html'; // Replace with your target URL
+      } else {
+          alert('Invalid email or password');
+      }
+  }
