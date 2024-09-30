@@ -1,0 +1,1 @@
+To create an accont go to "register" use a fake email adress ending with "@stud.noroff.no" and a minimum 8 characters password, write a bio and add a photo. And then click the button which will send you to the login page and use the same email and password to get in
