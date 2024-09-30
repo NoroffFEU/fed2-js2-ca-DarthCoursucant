@@ -1,17 +1,49 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noroff FED2 JS2 CA</title>
-    <script type="module" src="/src/app.js"></script>
-  </head>
+<head>
+    <link type="text/css" rel="stylesheet" href="../src/css/my-sheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <meta name="ConnectHub Login Login / Register Page" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="AKB">
+    <title>ConnectHub Login Login / Register Page"s</title>
+</head>
+
   <body>
-    <h1>Profile</h1>
 
-    <form name="updateProfile">
-      <button>Update Profile</button>
-    </form>
+    <div class="container">
+
+      <!-- LOGO HOLDER THING -->
+      <div class="logo">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#4a90e2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 17L12 22L22 17" stroke="#4a90e2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M2 12L12 17L22 12" stroke="#4a90e2" stroke-width="2" stroke-linecap="round"stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <!-- HEADER OF THE THING-->
+      <h1>ConnectHub</h1>
+      <h3>Not a user? <a href="register.html">Register here</a></h3>
+
+      <!-- FORM -->
+      <form id="loginForm">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email"/>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required placeholder="Enter your password" />
+        <!-- BUTTON -->
+        <button type="submit">
+          <span>Log In</span>
+          <div class="loading"></div>
+        </button>
+      </form>
+
+      <p id="statusMessage"></p>
+    </div>
+
   </body>
+
+  <script src="../src/js/my-file.js"></script>
 </html>
