@@ -13,6 +13,33 @@
 
 <body>
 
+   <!-- Header with Logo and Navigation Links -->
+   <header>
+    <a href="#" class="logo">ConnectHub</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="get_all_post.html"><i class="fas fa-home"></i> Home</a>
+      <a href="create_post.html"><i class="fas fa-pen-alt"></i>Create Post</a>
+      <a href="your_posts.html"><i class="fas fa-user"></i> Your Post</a>
+      <a href="register.html"><i class="fas fa-compass"></i> Logout</a>
+    </nav>
+    <div class="nav-toggle" id="navToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- MAIN BOdy -->
+  <div class="container">
+    <h1>Edit Post</h1>
+    <div id="editPostContainer">
+      <p>Loading post data...</p>
+    </div>
+    <button id="saveButton">Save Changes</button>
+    <p id="errorMessage" class="error"></p>
+  </div>
+
 </body>
 
+<script src="../../src/js/api/post/update.js"></script>
 </html>
