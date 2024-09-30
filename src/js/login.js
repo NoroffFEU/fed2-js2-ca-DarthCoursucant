@@ -1,5 +1,9 @@
 export async function login({ email, password }) {}
 
+const email = "Noroff@email.com";
+
+const password = "Anakin";
+
 const loginUser = async (email, password) => {
     const button = document.querySelector('button[type="submit"]');
     const statusMessage = document.getElementById("statusMessage");
