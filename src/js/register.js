@@ -31,7 +31,7 @@ const registerUser = async (name, email, password, bio, url) => {
 
       if (response.ok) {
         statusMessage.textContent = "Registration successful!";
-        window.location.href = "../../index.html";
+        window.location.href = "../../post/get-all-posts.html";
         statusMessage.className = "success";
       } else {
         statusMessage.textContent =
