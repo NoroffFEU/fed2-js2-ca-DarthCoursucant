@@ -10,41 +10,50 @@
     <title>ConnectHub Login Login / Register Page"s</title>
 </head>
 
-  <body>
+<body class="font-poppins bg-gray-100 flex items-center justify-center min-h-screen">
 
-    <div class="container">
+  <div class="bg-white shadow-lg rounded-lg p-8 w-96">
 
       <!-- LOGO HOLDER THING -->
-      <div class="logo">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#4a90e2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M2 17L12 22L22 17" stroke="#4a90e2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M2 12L12 17L22 12" stroke="#4a90e2" stroke-width="2" stroke-linecap="round"stroke-linejoin="round"/>
-        </svg>
+      <div class="flex justify-center mb-4">
+          <svg class="w-16 h-16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#4a90e2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 17L12 22L22 17" stroke="#4a90e2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 12L12 17L22 12" stroke="#4a90e2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          </svg>
       </div>
 
       <!-- HEADER OF THE THING-->
-      <h1>ConnectHub</h1>
-      <h3>Not a user? <a href="./auth/register/register.html">Register here</a></h3>
+      <h1 class="text-center text-2xl font-semibold mb-2">Social Network</h1>
+      <h3 class="text-center text-gray-600 mb-4">Not a user? <a href="./auth/register/register.html" class="text-blue-500 hover:underline">Register here</a></h3>
 
       <!-- FORM -->
-      <form id="loginForm">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required placeholder="Enter your email"/>
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required placeholder="Enter your password" />
+      <form id="loginForm" class="space-y-4">
+        <!-- EMAIL FIELD -->
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" id="email" name="email" required placeholder="Enter your email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50">
+        </div>
+
+        <!-- PASSWORD FIED -->
+        <div>
+          <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+          <input type="password" id="password" name="password" required placeholder="Enter your password" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50">
+        </div>
+
         <!-- BUTTON -->
-        <button type="submit">
+        <button type="submit" class="w-full bg-blue-500 text-white font-semibold py-2 rounded-md hover:bg-blue-600 transition duration-200">
           <span>Log In</span>
-          <div class="loading"></div>
+          <div class="loading inline-block"></div>
         </button>
       </form>
 
-      <p id="statusMessage"></p>
-    </div>
+      <p id="statusMessage" class="mt-4 text-center text-red-500"></p>
+  </div>
+</body>
 
-  </body>
 
+  <script src="https://cdn.tailwindcss.com/3.4.15"></script>
   <script src="./src/js/login.js"></script>
   <script src="./src/js/other-fuctions.js"></script>
 </html>
