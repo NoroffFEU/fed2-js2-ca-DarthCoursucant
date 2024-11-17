@@ -11,55 +11,50 @@
     <title>ConnectHub Feed</title>
 </head>
 
-<body>
-
-
-  <body class="bg-gray-100">
-
-    <!-- Header with Logo and Navigation Links -->
-    <header class="flex items-center justify-between p-4 bg-white shadow">
-      <a href="#" class="text-xl font-bold text-blue-600">ConnectHub</a>
-      <nav class="flex items-center space-x-10" id="navLinks">
-        <a href="./get-all-posts.html" class="flex items-center text-gray-700 hover:text-blue-600">
-          <i class="fas fa-home"></i> Home
-        </a>
-        <a href="../post/create/create-post.html" class="flex items-center text-gray-700 hover:text-blue-600">
-          <i class="fas fa-pen-alt"></i> Create Post
-        </a>
-        <a href="../post/your_posts.html" class="flex items-center text-gray-700 hover:text-blue-600">
-          <i class="fas fa-user"></i> Your Post
-        </a>
-        <a href="../post/edit/edit-post.html" class="flex items-center text-gray-700 hover:text-blue-600">
-          <i class="fas fa-user"></i> Edit Posts
-        </a>
-        <button id="logoutButton" onclick="logout()" class="flex items-center text-gray-700 hover:text-blue-600">
-          <i class="fas fa-compass"></i> Logout
-        </button>
-      </nav>
-  
-      <div class="nav-toggle cursor-pointer" id="navToggle">
-        <span class="block w-6 h-0.5 bg-gray-600 mb-1"></span>
-        <span class="block w-6 h-0.5 bg-gray-600 mb-1"></span>
-        <span class="block w-6 h-0.5 bg-gray-600"></span>
-      </div>
-    </header>
-  
-    <!-- Main Feed Container -->
-    <div class="p-4">
-      <div class="flex items-center mb-4">
-        <input type="text" id="searchInput" placeholder="Search posts... (by title or body)" class="flex-grow p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-        <button id="searchButton" class="ml-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Search</button>
-      </div>
-  
-      <div class="container mx-auto">
-        <main class="feed" id="postsContainer">
-          <!-- FYI Posts will Come here-->
-        </main>
-      </div>
+<body class="bg-gray-100">
+  <!-- Header with Logo and Navigation Links -->
+  <header class="flex items-center justify-between p-4 bg-white shadow">
+    <a href="./get-all-posts.html" class="text-xl font-bold text-blue-600">ConnectHub</a>
+    <nav class="flex items-center space-x-10" id="navLinks">
+      <a href="./get-all-posts.html" class="flex items-center text-gray-700 hover:text-blue-600">
+        <i class="fas fa-home"></i> Home
+      </a>
+      <a href="../post/create/create-post.html" class="flex items-center text-gray-700 hover:text-blue-600">
+        <i class="fas fa-pen-alt"></i> Create Post
+      </a>
+      <a href="../post/your_posts.html" class="flex items-center text-gray-700 hover:text-blue-600">
+        <i class="fas fa-user"></i> Your Post
+      </a>
+      <a href="../post/edit/edit-post.html" class="flex items-center text-gray-700 hover:text-blue-600">
+        <i class="fas fa-user"></i> Edit Posts
+      </a>
+      <button id="logoutButton" onclick="logout()" class="flex items-center text-gray-700 hover:text-blue-600 ml-6">
+        <i class="fas fa-compass"></i> Logout
+      </button>
+    </nav>
+    
+    <div class="nav-toggle cursor-pointer" id="navToggle">
+      <span class="block w-6 h-0.5 bg-gray-600 mb-1"></span>
+      <span class="block w-6 h-0.5 bg-gray-600 mb-1"></span>
+      <span class="block w-6 h-0.5 bg-gray-600"></span>
     </div>
-  
-  </body>
-  
+  </header>
+    
+  <!-- Main Feed Container -->
+  <div class="p-4">
+    <div class="flex items-center mb-4">
+      <input type="text" id="searchInput" placeholder="Search posts... (by title or body)" class="flex-grow p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+      <button id="searchButton" class="ml-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Search</button>
+    </div>
+    
+    <div class="container mx-auto">
+      <main class="feed" id="postsContainer">
+        <!-- Posts will Come here-->
+      </main>
+    </div>
+  </div>
+</body>
+    
 
 <script src="https://cdn.tailwindcss.com/3.4.15"></script>
 <script src="../src/js/get-all-posts.js"></script>
