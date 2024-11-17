@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="Create New Post" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="AKB">
+    <title>Create New Post</title>
+</head>
+
+
+<body class="bg-gray-100">
+  <header class="flex items-center justify-between p-4 bg-white shadow">
+    <a href="../get-all-posts.html" class="text-xl font-bold text-blue-600">ConnectHub</a>
+
+    <nav class="hidden md:flex space-x-4" id="navLinks">
+      <a href="../get-all-posts.html" class="flex items-center text-gray-700 hover:text-blue-600">
+        <i class="fas fa-home"></i> Home
+      </a>
+      <a href="../edit/edit-post.html" class="flex items-center text-gray-700 hover:text-blue-600">
+        <i class="fas fa-pen-alt"></i> Edit Post
+      </a>
+      <a href="../your_posts.html" class="flex items-center text-gray-700 hover:text-blue-600">
+        <i class="fas fa-user"></i> Your Posts
+      </a>
+      <a href="../../index.html" class="flex items-center text-gray-700 hover:text-blue-600">
+        <i class="fas fa-compass"></i> Logout
+      </a>
+    </nav>
+
+    <div class="md:hidden flex flex-col justify-center items-center" id="navToggle">
+      <span class="block w-8 h-1 bg-gray-600 mb-1"></span>
+      <span class="block w-8 h-1 bg-gray-600 mb-1"></span>
+      <span class="block w-8 h-1 bg-gray-600"></span>
+    </div>
+  </header>
+
+  <div class="container mx-auto p-6 bg-white rounded shadow mt-4">
+    <h1 class="text-2xl font-bold mb-4">Create New Post</h1>
+    <form id="createPostForm" class="space-y-4">
+      <div>
+        <label for="postTitle" class="block text-sm font-medium text-gray-700">Title</label>
+        <input type="text" id="postTitle" name="postTitle" required placeholder="Enter post title" class="mt-1 block w-full border border-gray-300 rounded p-2">
+      </div>
+      
+      <div>
+        <label for="postBody" class="block text-sm font-medium text-gray-700">Body</label>
+        <textarea id="postBody" name="postBody" required placeholder="Write your post here..." class="mt-1 block w-full border border-gray-300 rounded p-2"></textarea>
+      </div>
+
+      <div>
+        <input type="file" id="imageUploader" accept="image/*" class="mt-2">
+        <input type="hidden" id="imageUrl" />
+      </div>
+
+      <button type="submit" id="submitButton" class="mt-4 w-full bg-blue-600 text-white rounded p-2 hover:bg-blue-700">Create Post</button>
+    </form>
+    <p id="postStatus" class="mt-2 text-green-600"></p>
+  </div>
+</body>
+
+
+<script src="https://cdn.tailwindcss.com/3.4.15"></script>
+<script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+<script src="../../src/js/create-post.js"></script>
+</html>
